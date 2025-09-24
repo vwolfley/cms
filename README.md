@@ -60,9 +60,10 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
-### Built Using CLI Command
-ng new cms --prefix=cms --no-standalone --no-routing
-npm install bootstrap@3 --save
-npm install jquery --save
+### Built Using CLI Commands
+
+- ng new cms --prefix=cms --no-standalone --no-routing
+- npm install bootstrap@3 --save
+- npm install jquery --save
 
 
