@@ -1,4 +1,6 @@
-# Cms
+# cms
+
+CMS application for WDD 430 - Fall 2025 -BYUI
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
 
