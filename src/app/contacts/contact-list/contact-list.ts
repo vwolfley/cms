@@ -14,7 +14,7 @@ export class ContactList {
       'R. Kent Jackson',
       'jacksonk@byui.edu',
       '208-496-3771',
-      'assets/images/jacksonk.jpg',
+      '../../../assets/images/jacksonk.jpg',
       null
     ),
     new Contact(
