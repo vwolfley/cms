@@ -6,6 +6,7 @@ import { Header } from './header';
 import { Contacts } from './contacts/contacts';
 import { ContactList } from './contacts/contact-list/contact-list';
 import { ContactDetail } from './contacts/contact-detail/contact-detail';
+import { ContactItem } from './contacts/contact-item/contact-item';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ContactDetail } from './contacts/contact-detail/contact-detail';
     Contacts,
     ContactList,
     ContactDetail,
+    ContactItem,
   ],
   imports: [
     BrowserModule
