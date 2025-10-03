@@ -67,3 +67,4 @@ For more information on using the Angular CLI, including detailed command refere
 - npm install jquery --save
 
 
+ng g c <component name> --skip-tests
