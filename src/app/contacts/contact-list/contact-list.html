@@ -6,8 +6,9 @@
 
   <div class="panel-body">
     <div class="col-xs-12">
-      <app-contact-item *ngFor="let contactEl of contacts" [contact]="contactEl">
-      </app-contact-item>
+      @for (contactEl of contacts; track contactEl.id) {
+      <cms-contact-item [contact]="contactEl" (click)="onSelected(contactEl)"> </cms-contact-item>
+      }
     </div>
   </div>
 </div>
