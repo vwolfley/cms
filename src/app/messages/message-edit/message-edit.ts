@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
+import { v4 as uuidv4 } from 'uuid';
 import { Message } from '../message.model';
 
 @Component({
@@ -21,14 +22,11 @@ export class MessageEdit {
     const subject = this.subjectInput.nativeElement.value;
     const msgText = this.msgTextInput.nativeElement.value;
     // Create a new Message object
-    const newMessage = new Message('1', subject, msgText, this.currentSender);
+    const newId = uuidv4();
+    const newMessage = new Message(newId, subject, msgText, this.currentSender);
 
     // Emit the new message to parent
     this.addMessageEvent.emit(newMessage);
-
-    // Optionally, clear the form after sending
-    this.subjectInput.nativeElement.value = '';
-    this.msgTextInput.nativeElement.value = '';
   }
 
   onClear() {

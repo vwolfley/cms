@@ -16,9 +16,9 @@ export class MessageList implements OnInit {
 
   constructor() {}
 
+  ngOnInit(): void {}
+
   onAddMessage(message: Message) {
     this.messages.push(message);
   }
-
-  ngOnInit(): void {}
 }
