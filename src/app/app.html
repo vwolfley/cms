@@ -3,32 +3,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      @if (selectedFeature === 'documents') {
+      @switch (selectedFeature) { @case ('documents') {
       <cms-documents></cms-documents>
-      } @if (selectedFeature === 'messages') {
+      } @case ('messages') {
       <cms-message-list></cms-message-list>
-      } @if (selectedFeature === 'contacts') {
+      } @case ('contacts') {
       <cms-contacts></cms-contacts>
-      }
-      <!-- <cms-documents *ngIf="selectedFeature === 'documents'"></cms-documents>
-      <cms-message-list *ngIf="selectedFeature === 'messages'"></cms-message-list>
-      <cms-contacts *ngIf="selectedFeature === 'contacts'"></cms-contacts> -->
+      } }
     </div>
   </div>
 </div>
-
-
-<!-- @switch (selectedFeature) {
-  @case ('documents') {
-    <cms-documents></cms-documents>
-  }
-  @case ('messages') {
-    <cms-message-list></cms-message-list>
-  }
-  @case ('contacts') {
-    <cms-contacts></cms-contacts>
-  }
-  @default {
-    <p>No feature selected.</p>
-  }
-} -->
