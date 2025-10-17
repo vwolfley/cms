@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
+
 import { v4 as uuidv4 } from 'uuid';
 import { Message } from '../message.model';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'cms-message-edit',
@@ -16,7 +18,7 @@ export class MessageEdit {
 
   currentSender: string = 'Vern Wolfley';
 
-  constructor() {}
+  constructor(private messageService: MessageService) {}
 
   onSendMessage() {
     const subject = this.subjectInput.nativeElement.value;
@@ -25,8 +27,7 @@ export class MessageEdit {
     const newId = uuidv4();
     const newMessage = new Message(newId, subject, msgText, this.currentSender);
 
-    // Emit the new message to parent
-    this.addMessageEvent.emit(newMessage);
+    this.messageService.addMessage(newMessage);
   }
 
   onClear() {

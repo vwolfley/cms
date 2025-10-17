@@ -7,7 +7,7 @@ import { MOCKDOCUMENTS } from './MOCKDOCUMENTS';
   providedIn: 'root',
 })
 export class DocumentsService {
-  documents: Document[] = [];
+  private documents: Document[] = [];
   documentSelectedEvent = new EventEmitter<Document>();
 
   constructor() {
