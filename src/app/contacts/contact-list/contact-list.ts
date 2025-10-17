@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 
 import { Contact } from '../contact.model';
-import { ContactsService } from '../contact.service';
+import { ContactsService } from '../contacts.service';
 
 @Component({
   selector: 'cms-contact-list',
