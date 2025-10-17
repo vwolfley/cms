@@ -2,7 +2,7 @@ import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDete
 import { BrowserModule } from '@angular/platform-browser';
 
 import { App } from './app';
-import { Header } from './header';
+import { Header } from './header/header';
 import { Contacts } from './contacts/contacts';
 import { ContactList } from './contacts/contact-list/contact-list';
 import { ContactDetail } from './contacts/contact-detail/contact-detail';
