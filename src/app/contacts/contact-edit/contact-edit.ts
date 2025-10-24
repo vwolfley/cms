@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'cms-contact-edit',
   standalone: false,
   templateUrl: './contact-edit.html',
-  styleUrl: './contact-edit.css'
+  styleUrl: './contact-edit.css',
 })
-export class ContactEdit {
-
-}
+export class ContactEdit {}

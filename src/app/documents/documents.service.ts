@@ -20,7 +20,6 @@ export class DocumentsService {
   }
 
   getDocument(id: string): Document | null {
-    // Find the document with the given id or return null if not found
     return this.documents.find((document) => document.id === id) || null;
   }
 
