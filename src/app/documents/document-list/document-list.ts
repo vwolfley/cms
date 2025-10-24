@@ -17,5 +17,15 @@ export class DocumentList implements OnInit {
     this.documents = this.documentsService.getDocuments();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    // Get the initial list of documents
+    this.documents = this.documentsService.getDocuments();
+
+    // Subscribe to document changes
+    this.documentsService.documentChangedEvent.subscribe(
+      (documents: Document[]) => {
+        this.documents = documents;
+      }
+    );
+  }
 }
