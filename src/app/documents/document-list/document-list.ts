@@ -13,19 +13,15 @@ export class DocumentList implements OnInit {
   documents: Document[] = [];
   documentId: string = '';
 
-  constructor(private documentsService: DocumentsService) {
-    this.documents = this.documentsService.getDocuments();
-  }
+  constructor(private documentsService: DocumentsService) {}
 
   ngOnInit() {
     // Get the initial list of documents
     this.documents = this.documentsService.getDocuments();
 
     // Subscribe to document changes
-    this.documentsService.documentChangedEvent.subscribe(
-      (documents: Document[]) => {
-        this.documents = documents;
-      }
-    );
+    this.documentsService.documentChangedEvent.subscribe((documents: Document[]) => {
+      this.documents = documents;
+    });
   }
 }
